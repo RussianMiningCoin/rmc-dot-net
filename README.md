@@ -87,15 +87,28 @@ namespace rmc_test_key_generation
 Sample program output:
 
 ```
-Random seed: 34Pm89637ZZnx9tiZJyh8Bdpo9L4u
-Key #0 : (1MaQGd5kPDxdHFdks2kZ1MASBGxdCtKHxt, Kz4Y1VtNcVLk4zKhJCszUaQN2kaLfcYurXavuLpsJScHyjd8waY7)
-Key #1 : (1NjkSVtDR8Ck18cqSE75SGP8QKGXkCn2Vb, L1hjC8XttieQioyqohF8YxU8ovaUUHEdGrMiLbRFV8cC3YTZ5BEQ)
-Key #2 : (1EphUXTzEhDZQQ74fEftz97HE5p2itMZXV, L51rgZWzi4Mcy5g6s3VZnEFnBELV4kJdSndT3jsMjgWEx4xG1mrc)
-Key #3 : (1N8zUro3QQA8uN5GfEe34fn3RnEat19inr, L453BxZ3gFMD7JGLDrxEGkWTatQHkYoTkiAu8QMAnZqwQLuHnKru)
-Key #4 : (18ztrdy2p1x6AKVG4etxQvw9Mtvnj4dpgY, KyJwhg3cSjpAYpcuoetjkapRL6bVsfgdGb2aCtcdA3BGMNhu9KGJ)
-Key #5 : (1CW15wzX79Pzry6ydF7FE6LRUVbbdTNXo3, Kym9mpu4YUpBQzr1r3UjZa6gXKxoJDfUZAtHJ6g5VJcoUvjkLZ1G)
-Key #6 : (16DjtL5Mgyh1w4LnK3XeCXF4qXYyUmKFVd, L1aJQ8pSTRetv3TUcxdHvF1tnaM6GL2vKewt41w7Ykk1x8ktSyj5)
-Key #7 : (13C3tXw8kekCFYF3Ju4USTq9Hs2Cav28kv, L2STZkYATxmKadsw3vkqaJonKyHjEWqPuZDi26Ht3DfWi8jWutQk)
-Key #8 : (1PYtZrLYcan6McVqBPu76QjevUM2zB9LzP, L3yR9VLmqmCAM3kktjj2KbMzW3YHH1kdJzZ1eox38eMF3DopH4Fd)
-Key #9 : (1PNABGMnNmXT5Ss3GBtmmwxxabbgG9o9WD, Kye9szX34n2fRNkF2JPzUegSP73d8sajQdGpEGGRKV41ntKU3HR7)
+Random seed: 33DaCjeQEqgz2Jm6gghTmX9q96nUt
+Root key : (1J5uiC62HH4hg3dr5PAbSAiwuLpjrK8bDe, KysDFbhTfQiXJodG7JTFRj4qpDDSYi3jL6CsqrVaTkhdRa7H2EAa)
+Key #0 : (18aefeyQF3kXPzfLkSyJC7eCjuzEEUKvPx, L31Fqy4yj8vBHnHuUqd1ozWA13zURbby6QL9SQWBxbp8ZdH8R4Tv)
+Key #1 : (18NR3WNhijaVEXBJaXtyhfjdZfzUVFEBnw, L5NpPsB2QPuVUrn3pkJGboGDWD5RTVaG73xumSKDFYG4hyrfKwtm)
+Key #2 : (1Kxmqz9muFb8jVjQPpSYomYUrJXvyLqUP9, L3kEoZVX8cLTeK9XmgMihfFvbU7XAjyFRFq7X7V5HhsY8CMS7GmT)
+Key #3 : (1GVJaE94AZr4WJ8KcseiNycjsv6FYdQWoy, KyWqadwpbxLodjzMw55kMfXmn68tcmHzufhqQFB38VbKTdkB7f8X)
+Key #4 : (15Uj4dXeicqcj7VccysN396Fq8JujpKaP8, Kx7nPts9sdJVYQLB8ciYSZPYE2U4jGj9T6vWPU5cfyjRWg9yqbei)
+Key #5 : (1LrudRaGea5bEAQnxajJb4tQfnF2bDv9M3, KzQatBXjoyrHrxfUcePFaGN71jivmaYJSp38XgEHhFGap1fBYNGw)
+Key #6 : (14NcVjEZDKyHferh9SbXjamqUwyzUrh2Ls, L1ovdgpbqKeouNeSMiFNqZKX5uDM3VPuCm7FRXA4k65F3PcWxwfE)
+Key #7 : (1JmEFYsFS76jyXNpANWzyBTPWWFFZtVi6c, KwKL4hD77q8V6S1yacUMcQT2eNpjRvHPvKNr9ut8iNi3odzyFQLH)
+Key #8 : (12iToVB9bMn2cjHnZPdCBUujgmjtVvZCzt, KxQH1iQdESNHkrq3WxDXrsnfd5Lcz7uGhwNLPRbidk6sUXg4BC5T)
+Key #9 : (1PXBCv2vYi7mpTT2GqAigVXyDw2FDFBMjX, KxpG5KbHFJaM19NQAvVW51FFJBSXmP2eFtjLnLYZpxkbCnqJZ4SN)
+Derived seed: 35tDMF67PWq8XmqY88CjBPZspfwX2
+Root key : (19HVVcvqHvFocvwpdN4nB5AXXgg19qqpw3, KzTZRtFzsus7RmRtVyspFtZLgM6VPgdZ6rSwWH2dHBEFrrLPpbaD)
+Key #0 : (1Da1f7YnkpDBXLUk63B4dP2NQKik8fMHDZ, KwYU7jb4PxEhyNYAiNrPQZGHHE35Z4g5F2ncpG8eYqL24MUHFcJx)
+Key #1 : (18Ew6xrwtnXw2bHPCksTWeE24wjxoprLoF, L1eFj1BoCZxVJRgJMJ1vyHrpGPznN5kuVoDMGJzgeFtCW7iAZHdz)
+Key #2 : (15Nr7JmY2JRVezsZffyL7YPVJspzCchYyD, L2pAES9wjXG7jjQE6QTfMH89zdvtbNLb2YaPr74H9uWZRZzA5ZfF)
+Key #3 : (1CcZhx4FYwWRVjUQvcitPYBcWCss8dvQhD, Ky6PWeAdZuo2crWQnzeCJzMzUhYk9cFAFbpeqWic66gv82dDtRXs)
+Key #4 : (1Q3T3NxMPwaMvh5U979JBGgFfcEtzjRaEE, Kywp6nRRTuw26sHTBwUJb2KMyNQbZ8QnEJyagqV3XsTth8XEYsjz)
+Key #5 : (1JnsMj3oFY59pyo8nzTg5HZzuT3aSvJzvt, L15CD1ATiGEGBhaVHiZzyHDcmkpX2oayC2msX8cnoWz8CFF43c79)
+Key #6 : (1LmieUWojZK3JFKiGsXJKyhXSJ7kbJapRB, L48nVJnpHaBspgRZ7EujpEFrXpssaLT1HDB7GMq63pHJLRKgJzAp)
+Key #7 : (12Hu2a7YC87Ub7s8jvmNcZ4xEuqWqciNm1, KzPQDSkEXDqkgDsv2pMJPtVBzChyxHpjbUTNpkiXM74Rw4SXzBVc)
+Key #8 : (1BNxk7LrqfHAYnScKTdqftmQgkBjSnp5nJ, L2bMxzKtoNmgkH4ocHxzGKSQknJdh576MXtJF53JBoEoBgkw4ry9)
+Key #9 : (1KtwuNS89HEB2k8oMBpZGUAcABu9rTNBQd, L5KuKKapfq2JMAfciRfqyyLRdBJ64uoiYjzxG5Y9U9h3rBNHRLXu)
 ```
