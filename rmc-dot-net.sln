@@ -3,6 +3,8 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "rmc-dot-net", "rmc-dot-net\rmc-dot-net.csproj", "{88C7DCE4-0D4C-4660-A9DB-57E6C187C127}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "rmc-test-signing", "rmc-test-signing\rmc-test-signing.csproj", "{7E2971B6-B21A-439D-A167-032A2876BBE3}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -13,5 +15,9 @@ Global
 		{88C7DCE4-0D4C-4660-A9DB-57E6C187C127}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{88C7DCE4-0D4C-4660-A9DB-57E6C187C127}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{88C7DCE4-0D4C-4660-A9DB-57E6C187C127}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7E2971B6-B21A-439D-A167-032A2876BBE3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7E2971B6-B21A-439D-A167-032A2876BBE3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7E2971B6-B21A-439D-A167-032A2876BBE3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7E2971B6-B21A-439D-A167-032A2876BBE3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
