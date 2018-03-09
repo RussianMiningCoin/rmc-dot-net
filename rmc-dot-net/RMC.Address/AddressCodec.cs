@@ -14,6 +14,7 @@ namespace RMC.Address
 
         public static B58.Version AccountPublic = B58.Version.With(versionByte: 35, expectedLength: 33);
         public static B58.Version AccountPrivate = B58.Version.With(versionByte: 34, expectedLength: 32);
+        public static B58.Version AccountWif = B58.Version.With(versionByte: 128, expectedLength: 33);
 
         public static B58.Version FamilyGenerator = B58.Version.With(versionByte: 41, expectedLength: 33);
 
@@ -47,6 +48,14 @@ namespace RMC.Address
         public static string EncodeSeed(byte[] bytes)
         {
             return B58.Encode(bytes, "secp256k1", AnySeed);
+        }
+
+        public static string EncodeKey(byte[] bytes)
+        {
+            var wif = new byte[bytes.Length + 1];
+            bytes.CopyTo(wif, 0);
+            wif[wif.Length - 1] = 0;
+            return B58.Encode(wif, AccountWif);
         }
 
         public static byte[] DecodeK256Seed(string seed)

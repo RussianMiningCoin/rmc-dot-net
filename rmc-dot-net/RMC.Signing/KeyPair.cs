@@ -67,6 +67,11 @@ namespace RMC.Signing
         {
             return Address.AddressCodec.EncodeAddress(this.PubKeyHash());
         }
+
+        public override string ToString()
+        {
+            return Address.AddressCodec.EncodeKey(this.Priv().ToByteArrayUnsigned());
+        }
     }
 
 }

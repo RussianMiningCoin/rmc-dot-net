@@ -11,6 +11,8 @@ namespace RMC.Signing
         byte[] Sign(byte[] message);
 
         string Id();
+
+        string ToString();
     }
 
     public static class KeyPairExtensions

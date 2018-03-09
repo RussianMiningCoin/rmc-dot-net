@@ -1,8 +1,5 @@
 ﻿using System;
 
-using RMC.Address;
-using RMC.Core;
-using RMC.Signing;
 using RMC.TxSigning;
 using Newtonsoft.Json.Linq;
 

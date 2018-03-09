@@ -40,7 +40,6 @@ namespace RMC.Signing
 
         public IKeyPair KeyPair(int pairIndex)
         {
-            pairIndex = 0;
             return KeyGenerator.From128Seed(_seedBytes, pairIndex);
         }
 
