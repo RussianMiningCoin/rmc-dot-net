@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{88C7DCE4-0D4C-4660-A9DB-57E6C187C127}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>rmcdotnet</RootNamespace>
+    <AssemblyName>rmc-dot-net</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.11.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="BouncyCastle.Crypto">
+      <HintPath>..\packages\Portable.BouncyCastle.1.8.1.4\lib\net40\BouncyCastle.Crypto.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RMC.Address\AddressCodec.cs" />
+    <Compile Include="RMC.Address\B58.cs" />
+    <Compile Include="RMC.Core\ISerializedType.cs" />
+    <Compile Include="RMC.Core\Binary\BinaryParser.cs" />
+    <Compile Include="RMC.Core\Binary\BinarySerializer.cs" />
+    <Compile Include="RMC.Core\Binary\BufferParser.cs" />
+    <Compile Include="RMC.Core\Binary\BytesList.cs" />
+    <Compile Include="RMC.Core\Binary\IBytesSink.cs" />
+    <Compile Include="RMC.Core\Binary\StreamParser.cs" />
+    <Compile Include="RMC.Core\Enums\AccountIdField.cs" />
+    <Compile Include="RMC.Core\Enums\AmountField.cs" />
+    <Compile Include="RMC.Core\Enums\BlobField.cs" />
+    <Compile Include="RMC.Core\Enums\EnumItem.cs" />
+    <Compile Include="RMC.Core\Enums\Enumeration.cs" />
+    <Compile Include="RMC.Core\Enums\Field.cs" />
+    <Compile Include="RMC.Core\Enums\FieldType.cs" />
+    <Compile Include="RMC.Core\Enums\FromJson.cs" />
+    <Compile Include="RMC.Core\Enums\FromParser.cs" />
+    <Compile Include="RMC.Core\Enums\Hash128Field.cs" />
+    <Compile Include="RMC.Core\Enums\Hash160Field.cs" />
+    <Compile Include="RMC.Core\Enums\Hash256Field.cs" />
+    <Compile Include="RMC.Core\Enums\PathSetField.cs" />
+    <Compile Include="RMC.Core\Enums\SerializedEnumItem.cs" />
+    <Compile Include="RMC.Core\Enums\SerializedEnumeration.cs" />
+    <Compile Include="RMC.Core\Enums\StArrayField.cs" />
+    <Compile Include="RMC.Core\Enums\StObjectField.cs" />
+    <Compile Include="RMC.Core\Enums\Uint16Field.cs" />
+    <Compile Include="RMC.Core\Enums\Uint32Field.cs" />
+    <Compile Include="RMC.Core\Enums\Uint64Field.cs" />
+    <Compile Include="RMC.Core\Enums\Uint8Field.cs" />
+    <Compile Include="RMC.Core\Enums\Vector256Field.cs" />
+    <Compile Include="RMC.Core\Hashing\HashPrefix.cs" />
+    <Compile Include="RMC.Core\Hashing\Sha512.cs" />
+    <Compile Include="RMC.Core\Ledger\LedgerHeader.cs" />
+    <Compile Include="RMC.Core\ShaMapTree\IShaMapItem.cs" />
+    <Compile Include="RMC.Core\ShaMapTree\ITreeWalker.cs" />
+    <Compile Include="RMC.Core\ShaMapTree\LedgerEntry.cs" />
+    <Compile Include="RMC.Core\ShaMapTree\OnLeaf.cs" />
+    <Compile Include="RMC.Core\ShaMapTree\PathToIndex.cs" />
+    <Compile Include="RMC.Core\ShaMapTree\ShaMap.cs" />
+    <Compile Include="RMC.Core\ShaMapTree\ShaMapDiff.cs" />
+    <Compile Include="RMC.Core\ShaMapTree\ShaMapInner.cs" />
+    <Compile Include="RMC.Core\ShaMapTree\ShaMapLeaf.cs" />
+    <Compile Include="RMC.Core\ShaMapTree\ShaMapNode.cs" />
+    <Compile Include="RMC.Core\ShaMapTree\TransactionResult.cs" />
+    <Compile Include="RMC.Core\Transactions\TxFormat.cs" />
+    <Compile Include="RMC.Core\Types\AccountId.cs" />
+    <Compile Include="RMC.Core\Types\Amount.cs" />
+    <Compile Include="RMC.Core\Types\AmountValue.cs" />
+    <Compile Include="RMC.Core\Types\Blob.cs" />
+    <Compile Include="RMC.Core\Types\Currency.cs" />
+    <Compile Include="RMC.Core\Types\EngineResult.cs" />
+    <Compile Include="RMC.Core\Types\Hash.cs" />
+    <Compile Include="RMC.Core\Types\Hash128.cs" />
+    <Compile Include="RMC.Core\Types\Hash160.cs" />
+    <Compile Include="RMC.Core\Types\Hash256.cs" />
+    <Compile Include="RMC.Core\Types\InvalidJsonException.cs" />
+    <Compile Include="RMC.Core\Types\LedgerEntryType.cs" />
+    <Compile Include="RMC.Core\Types\PathSet.cs" />
+    <Compile Include="RMC.Core\Types\StArray.cs" />
+    <Compile Include="RMC.Core\Types\StObject.cs" />
+    <Compile Include="RMC.Core\Types\StReader.cs" />
+    <Compile Include="RMC.Core\Types\TransactionType.cs" />
+    <Compile Include="RMC.Core\Types\Uint.cs" />
+    <Compile Include="RMC.Core\Types\Uint16.cs" />
+    <Compile Include="RMC.Core\Types\Uint32.cs" />
+    <Compile Include="RMC.Core\Types\Uint64.cs" />
+    <Compile Include="RMC.Core\Types\Uint8.cs" />
+    <Compile Include="RMC.Core\Types\UnissuedAmount.cs" />
+    <Compile Include="RMC.Core\Types\Vector256.cs" />
+    <Compile Include="RMC.Core\Util\B16.cs" />
+    <Compile Include="RMC.Core\Util\Utils.cs" />
+    <Compile Include="RMC.Signing\IKeyPair.cs" />
+    <Compile Include="RMC.Signing\Seed.cs" />
+    <Compile Include="RMC.Signing\Utils\HashUtils.cs" />
+    <Compile Include="RMC.Signing\Utils\Misc.cs" />
+    <Compile Include="RMC.Signing\Utils\Sha512.cs" />
+    <Compile Include="RMC.TxSigning\Extensions.cs" />
+    <Compile Include="RMC.TxSigning\InvalidTxException.cs" />
+    <Compile Include="RMC.TxSigning\SignedTx.cs" />
+    <Compile Include="RMC.TxSigning\TxSigner.cs" />
+    <Compile Include="RMC.TxSigning\Utils.cs" />
+    <Compile Include="RMC.Signing\EcdsaSignature.cs" />
+    <Compile Include="RMC.Signing\KeyGenerator.cs" />
+    <Compile Include="RMC.Signing\KeyPair.cs" />
+    <Compile Include="RMC.Signing\VerifyingKey.cs" />
+    <Compile Include="RMC.Signing\Secp256k1.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+</Project>
