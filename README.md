@@ -10,6 +10,7 @@ Signing is done with either ecdsa/rfc6979 or ed25519. See [ripple-keypairs](http
 using System;
 
 using RMC.TxSigning;
+using RMC.Signing;
 using Newtonsoft.Json.Linq;
 
 namespace rmc_test_signing
@@ -18,7 +19,6 @@ namespace rmc_test_signing
     {
         static void Main(string[] args)
         {
-            var secret = "35tDMF67PWq8XmqY88CjBPZspfwX2"; // HisDivineShadow
             var unsignedTxJson = @"{
                 'Account': '19HVVcvqHvFocvwpdN4nB5AXXgg19qqpw3',
                 'Amount': '1000',
@@ -29,12 +29,21 @@ namespace rmc_test_signing
                 'TransactionType' : 'Payment'
             }";
 
-            var signed = TxSigner.SignJson(JObject.Parse(unsignedTxJson), secret);
+            // Sign with secret seed
+            var secret = "35tDMF67PWq8XmqY88CjBPZspfwX2"; // HisDivineShadow
+            var signed1 = TxSigner.SignJson(JObject.Parse(unsignedTxJson), secret);
 
-            Console.WriteLine(signed.Hash);
-            Console.WriteLine(signed.TxJson);
-            Console.WriteLine(signed.TxBlob);
+            Console.WriteLine(signed1.Hash);
+            Console.WriteLine(signed1.TxJson);
+            Console.WriteLine(signed1.TxBlob);
 
+            // Sign with keypair
+            var keyPair = new KeyPair("KzTZRtFzsus7RmRtVyspFtZLgM6VPgdZ6rSwWH2dHBEFrrLPpbaD"); // Root key derived from "HisDivineShadow"
+            var signed2 = TxSigner.SignJson(JObject.Parse(unsignedTxJson), keyPair);
+
+            Console.WriteLine(signed2.Hash);
+            Console.WriteLine(signed2.TxJson);
+            Console.WriteLine(signed2.TxBlob);
         }
     }
 }
@@ -56,6 +65,19 @@ AF8B613F2AD03B51985906B9DA478592E2D9FA02D59CBC42B6CBBC2D3405DAA7
   "Destination": "15ipnwHm6VV8TR8bpbkG5zo4FbgT5ZqrFq"
 }
 120000228000000024000000016140000000000003E868400000000000000A73210303DD2483F6AB9D60061BC21DEFDD8A8E7DC2FA38FBFB8C42517AB4970E2470F674473045022100B206BF40F7889B10E7636FD4BA18882CBDFF3375469B5AC62BFC1B38BE21243A022060C47E35ED4B7A233D1F3156EB49E53F516D3FC72F0B1D61186380520E5D01BE81145ADF72606B9167952F3D2B801DA4CB6F920AAD2A831433C973CB52E70070222D0849F409273C3062B96D
+410A76D7E0C0574304BBFFF72B97D18B6B77D76B4B78E41E9AF5243194F7152F
+{
+  "TransactionType": "Payment",
+  "Flags": 2147483648,
+  "Sequence": 1,
+  "Amount": "1000",
+  "Fee": "10",
+  "SigningPubKey": "02CBE0F626FF6654B0895E535359792F5ADFA0E7E8753A0A95B0F5E3E774E136B2",
+  "TxnSignature": "3045022100EABABB1DBB071BEB5768FACCC45EABB35FCD1DA0A34031B8DAED87481EDB035B022041B74E1A755DA2FABB0FF6B9ACFE53BC137CF4FE0752E4E80DBF40615E87EF96",
+  "Account": "19HVVcvqHvFocvwpdN4nB5AXXgg19qqpw3",
+  "Destination": "15ipnwHm6VV8TR8bpbkG5zo4FbgT5ZqrFq"
+}
+120000228000000024000000016140000000000003E868400000000000000A732102CBE0F626FF6654B0895E535359792F5ADFA0E7E8753A0A95B0F5E3E774E136B274473045022100EABABB1DBB071BEB5768FACCC45EABB35FCD1DA0A34031B8DAED87481EDB035B022041B74E1A755DA2FABB0FF6B9ACFE53BC137CF4FE0752E4E80DBF40615E87EF9681145ADF72606B9167952F3D2B801DA4CB6F920AAD2A831433C973CB52E70070222D0849F409273C3062B96D
 ```
 
 ## Key generation
