@@ -15,7 +15,7 @@ namespace RMC.Core.Types
             {
                 return _encoded ?? (
                     _encoded = 
-                    AddressCodec.EncodeAddress(Buffer));
+                    AddressCodec.EncodeData(Buffer, AddressCodec.AccountId));
             }
             set { _encoded = value; }
         }
@@ -26,9 +26,9 @@ namespace RMC.Core.Types
         }
 
         public AccountId(string v) :
-            this(AddressCodec.DecodeAddress(v), v) {}
+            this(AddressCodec.DecodeData(v, AddressCodec.AccountId), v) {}
         public AccountId(byte[] hash) :
-            this(hash, AddressCodec.EncodeAddress(hash)) {}
+            this(hash, AddressCodec.EncodeData(hash, AddressCodec.AccountId)) {}
 
         public static implicit operator AccountId(string value)
         {

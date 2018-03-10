@@ -61,6 +61,11 @@ namespace RMC.TxSigning
             return FromSecret(secret).SignJson(tx);
         }
 
+        public static SignedTx SignJson(JObject tx, IKeyPair keyPair)
+        {
+            return FromKeyPair(keyPair).SignJson(tx);
+        }
+
         public SignedTx SignStObject(StObject tx)
         {
             tx.SetFlag(CanonicalSigFlag);

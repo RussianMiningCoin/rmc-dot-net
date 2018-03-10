@@ -1,5 +1,6 @@
 ﻿using Org.BouncyCastle.Math;
 using RMC.Signing.Utils;
+using RMC.Address;
 
 namespace RMC.Signing
 {
@@ -16,6 +17,14 @@ namespace RMC.Signing
 
         public KeyPair(BigInteger priv) : 
             this(priv, KeyGenerator.ComputePublicKey(priv))
+        {
+        }
+
+        public KeyPair(string wif) : this(AddressCodec.DecodeWif(wif))
+        {
+        }
+
+        public KeyPair(byte[] priv) : this(new BigInteger(priv))
         {
         }
 
@@ -65,12 +74,12 @@ namespace RMC.Signing
 
         public string Id()
         {
-            return Address.AddressCodec.EncodeAddress(this.PubKeyHash());
+            return AddressCodec.EncodeData(this.PubKeyHash(), AddressCodec.AccountId);
         }
 
         public override string ToString()
         {
-            return Address.AddressCodec.EncodeKey(this.Priv().ToByteArrayUnsigned());
+            return AddressCodec.EncodeWif(this.Priv().ToByteArrayUnsigned());
         }
     }
 

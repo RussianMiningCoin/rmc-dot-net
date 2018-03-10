@@ -20,7 +20,7 @@ namespace RMC.Signing
 
         public override string ToString()
         {
-            return EncodeSeed(_seedBytes);
+            return EncodeData(_seedBytes, AddressCodec.KeySeed);
         }
 
         public byte[] Bytes()
@@ -45,8 +45,8 @@ namespace RMC.Signing
 
         public static Seed FromBase58(string b58)
         {
-            var seed = DecodeSeed(b58);
-            return new Seed(seed.Bytes);
+            var seed = DecodeData(b58, AddressCodec.KeySeed);
+            return new Seed(seed);
         }
 
         public static Seed FromPassPhrase(string passPhrase)
